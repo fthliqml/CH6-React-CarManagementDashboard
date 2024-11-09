@@ -1,11 +1,12 @@
 import { useState } from "react";
-import "./AboutMe.css";
+import { Button } from "@material-tailwind/react";
 
-import Navbar from "@components/Navbar/Navbar";
+import MyNavbar from "@components/Navbar/MyNavbar";
 import HeroSection from "./components/HeroSection";
-// import Form from "./components/Form";
 
-function AboutMe() {
+import "./About.css";
+
+function About() {
   const name = "Muhammad Fatihul Iqmal";
   const tech = "Fullstack Web Developer";
 
@@ -13,16 +14,19 @@ function AboutMe() {
 
   return (
     <>
-      <Navbar active={"About Me"} />
+      <MyNavbar active={"about"} />
       <div className="content">
         <HeroSection name={name} tech={tech} />
 
-        <button className="btn" onClick={() => setCount((count) => count + 1)}>
+        <Button
+          variant="outlined"
+          onClick={() => setCount((count) => count + 1)}
+        >
           count is {count}
-        </button>
+        </Button>
       </div>
     </>
   );
 }
 
-export default AboutMe;
+export default About;

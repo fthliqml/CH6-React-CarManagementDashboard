@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
-import MyButton from "@components/MyButton";
 import { useState } from "react";
+import { Button } from "@material-tailwind/react";
 
 const HeroSection = ({ name, tech }) => {
   const [nameValue, setNameValue] = useState(name);
@@ -19,7 +19,7 @@ const HeroSection = ({ name, tech }) => {
 
   return (
     <>
-      <h1 className="mb-2">About Me</h1>
+      <h1 className="mb-2 text-2xl font-bold">About Me</h1>
       <p>
         Hello! My name is{" "}
         <span style={{ color: "red" }}>{nameDescription}</span> i’m a passionate{" "}
@@ -50,10 +50,9 @@ const HeroSection = ({ name, tech }) => {
         />
 
         {/* Sending handler as a props */}
-        <MyButton onClick={handlerClick}>
+        <Button color="light-blue" onClick={handlerClick}>
           <span>Change On Description</span>
-          {/* Accepted as children in MyButton */}
-        </MyButton>
+        </Button>
       </form>
     </>
   );

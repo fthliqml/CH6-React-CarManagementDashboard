@@ -8,11 +8,6 @@
   align-items: center;
 }
 
-.btn {
-  width: 60%;
-  margin: 1rem;
-}
-
 /* Styling untuk form secara keseluruhan */
 form {
   /* max-width: 400px; */
@@ -46,3 +41,22 @@ input[type="text"]:focus {
 input[type="text"]::placeholder {
   color: #888;
 }
+
+/* button {
+  border-radius: 8px;
+  border: 1px solid #888;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+} */

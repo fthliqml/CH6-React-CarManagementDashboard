@@ -1,4 +1,5 @@
 import { useNavigate, Link } from "react-router-dom";
+import { Button } from "@material-tailwind/react";
 
 const NotFound = () => {
   const navigate = useNavigate();
@@ -19,11 +20,16 @@ const NotFound = () => {
         gap: "2rem",
       }}
     >
-      <h1>404 NOT FOUND</h1>
+      <h1 className="text-xl font-bold">404 NOT FOUND</h1>
       <p>
-        Go to home page <Link to={"/dashboard"}>Home</Link>
+        Go to home page{" "}
+        <Link to={"/dashboard"} className="text-blue-800">
+          Dashboard
+        </Link>
       </p>
-      <button onClick={() => handleNavigation("/dashboard")}>Dashboard</button>
+      <Button variant="outlined" onClick={() => handleNavigation("/dashboard")}>
+        Dashboard
+      </Button>
     </div>
   );
 };
